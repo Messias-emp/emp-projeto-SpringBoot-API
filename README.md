@@ -19,17 +19,27 @@ API REST simples construída com **Spring Boot 3.5.6**, **Java 21** e **Gradle**
 
 ## 📁 Estrutura do projeto
 
-src/
-└─ main/
-├─ java/emp_mais/emp_spring_boot_api
-│ ├─ Application.java
-│ ├─ domain/model/News.java
-│ ├─ domain/repository/NewsRepository.java
-│ └─ controller/NewsController.java
-└─ resources/
-├─ application.properties
-├─ application-dev.properties
-└─ application-prod.properties
+src/main/java/emp_mais/emp_spring_boot_api
+│
+├── controller
+│ └── UserController.java # Endpoints REST
+│ └── exception
+│ └── GlobalExceptionHandler.java # Tratamento global de erros
+│
+├── domain
+│ └── model
+│ ├── User.java
+│ ├── Account.java
+│ ├── Card.java
+│ ├── Feature.java
+│ ├── News.java
+│ └── BaseItem.java
+│ └── repository
+│ └── UserRepository.java
+│
+├── service
+│ ├── UserService.java # Interface
+│ └── impl/UserServiceImpl.java # Implementação
 
 ---
 
